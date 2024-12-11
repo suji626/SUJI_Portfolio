@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SUJI_portfolio</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Noto+Sans+KR:wght@400&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+<style>
+/* 인라인 스타일 (추가된 부분만) */
+.tab-content .tab { display: none; } /* 기본적으로 숨김 */
+.tab-content .tab.active { display: block; } /* 활성화된 탭만 보이도록 */
+
+</style>
+</head>
+
+<body class="main_body">
+<div id="menubar">
+	<header id="header">
+		<div>
+			<ul class="gnb">
+				<li><a href="index.html"><img class="logo" src="img/index/logo.png" alt="로고"></a></li>
+			</ul>
+		</div>
+	</header>
+</div>
+
+<div class="main">
+	<div id="visual">
+		<img src="img/index/main.png" alt="메인이미지">
+	</div>
+</div>
+
+<div id="container">
+	<div class="tab-inner">
+	  <div class="tab-btn">
+		<input type="radio" id="tab1" name="tabs" checked>
+		<label for="tab1">RESUME</label>
+
+		<input type="radio" id="tab2" name="tabs">
+		<label for="tab2">EDIT</label>
+
+		<input type="radio" id="tab3" name="tabs">
+		<label for="tab3">BRANDING</label>
+
+		<input type="radio" id="tab4" name="tabs">
+		<label for="tab4">UI/UX WEB</label>
+	  </div>
+	</div>
+
+	<div class="tab-content">
+		<div id="tab1" class="tab active">
+			<img src="img/resume/resume_img (1).jpg" alt="이력">
+			<img src="img/resume/resume_img (2).jpg" alt="과정">
+		</div>
+		<div id="tab2" class="tab">
+			<img src="img/edit/edit_img (1).jpg" alt="편집">
+			<img src="img/edit/edit_img (2).jpg" alt="편집">
+			<img src="img/edit/edit_img (3).jpg" alt="편집">
+			<img src="img/edit/edit_img (4).jpg" alt="편집">
+			<img src="img/edit/edit_img (5).jpg" alt="편집">
+			<img src="img/edit/edit_img (6).jpg" alt="편집">
+			<img src="img/edit/edit_img (7).jpg" alt="편집">
+			<img src="img/edit/edit_img (8).jpg" alt="편집">
+			<img src="img/edit/edit_img (9).jpg" alt="편집">
+			<img src="img/edit/edit_img (10).jpg" alt="편집">
+			<img src="img/edit/edit_img (11).jpg" alt="편집">
+			<img src="img/edit/edit_img (12).jpg" alt="편집">
+			<img src="img/edit/edit_img (13).jpg" alt="편집">
+			<img src="img/edit/edit_img (14).jpg" alt="편집">
+		</div>
+		<div id="tab3" class="tab">
+			<img src="img/branding/branding_img (1).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (2).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (3).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (4).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (5).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (6).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (7).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (8).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (9).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (10).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (11).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (12).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (13).jpg" alt="브랜딩">
+			<img src="img/branding/branding_img (14).jpg" alt="브랜딩">
+		</div>
+		<div id="tab4" class="tab">
+			<img src="img/ui·ux web/ui·ux web_img (1).jpg" alt="앱웹">
+			<img src="img/ui·ux web/ui·ux web_img (2).jpg" alt="앱웹">
+			<img src="img/ui·ux web/ui·ux web_img (3).jpg" alt="앱웹">
+			<img src="img/ui·ux web/ui·ux web_img (4).jpg" alt="앱웹">
+			<img src="img/ui·ux web/ui·ux web_img (5).jpg" alt="앱웹">
+			<img src="img/ui·ux web/ui·ux web_img (6).jpg" alt="앱웹">
+			<img src="img/ui·ux web/ui·ux web_img (7).jpg" alt="앱웹">
+			<img src="img/ui·ux web/ui·ux web_img (8).jpg" alt="앱웹">
+		</div>
+	</div>
+</div>
+
+<script>
+    // 탭 기능을 활성화하는 JavaScript
+    const tabs = document.querySelectorAll(".tab-btn label");
+    const tabContents = document.querySelectorAll(".tab-content .tab");
+
+    tabs.forEach((tab, i) => {
+        tab.addEventListener("click", () => {
+            // 모든 버튼과 탭에서 활성 클래스 제거
+            tabs.forEach(tab => tab.classList.remove("active"));
+            tabContents.forEach(content => content.classList.remove("active"));
+
+            // 클릭된 버튼과 해당되는 콘텐츠 활성화
+            tab.classList.add("active");
+            tabContents[i].classList.add("active");
+        });
+    });
+
+    // 페이지 로드 시 기본으로 첫 번째 탭 선택
+    tabs[0].classList.add("active");
+    tabContents[0].classList.add("active");
+</script>
+
+<div id="link">
+	<a href="https://open.kakao.com/o/su3KUHgd" rel="카카오톡"><img src="img/index/link1.png" alt="카카오톡"></a>
+	<a href="mailto:suji9696@naver.com" rel="메일"><img src="img/index/link2.png" alt="이메일"></a>
+	<a href="https://www.instagram.com/626_sujiiiii.i/" rel="인스타그램"><img src="img/index/link3.png" alt="인스타그램"></a>
+</div>
+
+<footer id="footer">
+	<address class="company">Copyright 2024 Suji, Jung. All Rights Reserved.</address>
+</footer>
+
+</body>
+</html>

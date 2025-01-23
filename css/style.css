@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;} 
+.main_body {width: 100%;  background-color: #ffffff;}
+body {font-size:12px; font-family:sans-serif; color:#616470;}
+ul {list-style:none;} 
+img {border:0;}
+a {text-decoration:none; }
+
+
+.logo {width:139px; height:53px; } /* 메뉴바 */
+.gnb {width:1024px; height:100px; margin: 0 auto; display: flex; justify-content: center; align-items: center; overflow: hidden;}
+
+
+#visual {position: absolute; top:0; left:50%; width: 1024px; margin-left: -512px; text-align: center; z-index: 10; padding-top: 130px;}
+.main {position: relative; height: 600px; background: #616470; margin-bottom: 0PX;}
+
+/*---------------------------------------------------------*/
+
+#container {width:1024px; margin: 0 auto;} /* 컨텐츠 */
+.tab-inner {display: flex; justify-content: center; align-items: center; height: 50px; padding: 50px;}
+.tab-btn {width: 600px; height: 40px; display: flex; justify-content: space-around;}
+
+/* 라디오 버튼 숨기기 */
+.tab-btn input[type="radio"] {display: none;}
+
+/* 라디오 버튼이 체크되었을 때 해당 탭만 표시 */
+.tab-btn input[type="radio"]:checked + label + .tab {display: block;}
+
+/* 라벨 스타일 (버튼처럼 보이게) */
+.tab-btn label {display: flex; justify-content: center; align-items: center; cursor: pointer;
+  width: 120px; height: 45px; background-color: #ffffff; color: #616470; border-radius: 20px;
+  font-size: 15px; font-weight: bold; font-family: 'Lato', sans-serif; font-family: 'Noto Sans KR', sans-serif; text-align: center;
+  transition:}
+
+/* 클릭된 탭의 스타일 */
+.tab-btn input[type="radio"]:checked + label {border-radius: 70px; background-color: #616470; color: #ffffff;}
+
+/* 선택 된 탭 콘텐츠를 표시 */
+#tab1:checked ~ .tab-content #tab1,
+#tab2:checked ~ .tab-content #tab2,
+#tab3:checked ~ .tab-content #tab3,
+#tab4:checked ~ .tab-content #tab4 {display: block;}
+
+
+/* 탭 이미지 스타일 */
+.tab-content {position: relative;}
+#tab1 img {width: 1020px; display: block; padding-bottom: 3px;}
+
+
+
+
+/*---------------------------------------------------------*/
+
+#link {width:1024px; margin: auto; padding-bottom:50px; text-align: center;} /* sns아이콘 */
+#link a{display: inline-block; margin-left:40px;}
+#link a:first-child{margin-left:0;}
+
+#footer {padding:32px 0;text-align: center; color:#FFFFFF; background:#616470} /* 푸터 */
+#footer address {font-style: normal;}
+

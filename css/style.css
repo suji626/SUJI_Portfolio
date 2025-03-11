@@ -13,7 +13,7 @@ a {text-decoration:none; }
 
 
 #visual {position: absolute; top:0; left:50%; width: 1024px; margin-left: -512px; text-align: center; z-index: 10;}
-.main {position: relative; height: 450px; background: #616470; margin-bottom: 0PX;}
+.main {position: relative; height: 500px; background: #616470; margin-bottom: 0PX;}
 
 /*---------------------------------------------------------*/
 
